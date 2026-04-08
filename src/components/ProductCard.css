@@ -1,0 +1,77 @@
+.card {
+  border: 1px solid #eee;
+  padding: 12px;
+  background: white;
+}
+
+/* IMAGE */
+.image-wrapper {
+  position: relative; /* REQUIRED */
+  height: 220px;
+  width: 100%;
+}
+
+.image-wrapper img {
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* TEXT SECTION */
+.card-info {
+  margin-top: 10px;
+}
+
+/* 🔥 TITLE FIX */
+.title {
+  width: 200px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: left;
+
+  white-space: nowrap; /* SINGLE LINE */
+  overflow: hidden;
+  text-overflow: ellipsis; /* ... */
+}
+
+/* BOTTOM ROW */
+.card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 6px;
+}
+
+/* PRICE */
+.price {
+  font-size: 12px;
+  color: #333;
+}
+
+/* HEART */
+
+.auth-text {
+  color: #9ca3af; /* light gray */
+  font-size: 12px;
+}
+
+.link {
+  color: #6b7280; /* slightly darker gray */
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.link:hover {
+  color: #374151; /* darker on hover */
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  .title {
+    width: 150px;
+  }
+}
+
+@media (max-width: 550px) {
+  .title {
+    width: 100px;
+  }
+}

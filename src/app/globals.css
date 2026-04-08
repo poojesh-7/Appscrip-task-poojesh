@@ -1,0 +1,153 @@
+/* Layout wrapper */
+body {
+  font-family: "Montserrat", Arial, sans-serif;
+  color: #222;
+}
+
+.arrow {
+  vertical-align: middle;
+}
+
+.inverted {
+  transform: rotate(180deg);
+}
+
+.layout {
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+}
+
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 40px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Filter visible */
+.withFilter {
+  grid-template-columns: 250px 1fr;
+}
+
+/* Filter hidden */
+.noFilter {
+  grid-template-columns: 1fr;
+}
+
+/* Product Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* Card */
+.card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+}
+
+/* Filters */
+.filters {
+  border-right: 1px solid #ddd;
+}
+
+.filter-button-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hide_button_arr {
+  margin-top: -10px;
+}
+
+.hide-filter {
+  font-size: 16px;
+  border: none;
+  color: gray;
+  cursor: pointer;
+  background-color: transparent;
+}
+/* DEFAULT (Desktop) */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* Desktop → filter hidden */
+@media (min-width: 1025px) {
+  .noFilter .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ========================= */
+/* TABLET (769px - 1024px) */
+/* ========================= */
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  .layout.withFilter {
+    grid-template-columns: 200px 1fr; /* smaller filter */
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .noFilter .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ========================= */
+/* MOBILE (≤768px) */
+/* ========================= */
+
+@media (max-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .hide-filter {
+    margin-left: 0;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* ALWAYS 2 */
+  }
+
+  .noFilter .grid {
+    grid-template-columns: repeat(2, 1fr); /* override */
+  }
+
+  .filters {
+    width: 100%;
+  }
+
+  .filter-button-wrapper {
+    margin-left: 0;
+  }
+}

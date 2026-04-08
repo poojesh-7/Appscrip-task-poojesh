@@ -1,0 +1,11 @@
+.heart {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 30px;
+  color: black;
+}
+
+.heart.liked {
+  color: red;
+}

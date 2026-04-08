@@ -1,0 +1,62 @@
+.filters {
+  padding: 10px;
+}
+
+.custom-checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Hide default checkbox */
+.custom-checkbox input {
+  display: none;
+}
+
+/* Custom box */
+.checkmark {
+  width: 14px;
+  height: 14px;
+  border: 2px solid #999;
+  background: transparent;
+  display: inline-block;
+}
+
+/* Checked state */
+.custom-checkbox input:checked + .checkmark {
+  background-color: #555;
+}
+
+.filter-section {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.filter-options {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.all {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.unselect {
+  font-size: 12px;
+  color: gray;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
