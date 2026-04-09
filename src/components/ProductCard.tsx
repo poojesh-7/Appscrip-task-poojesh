@@ -6,7 +6,7 @@ export default function ProductCard({ product }: { product: Product }) {
     return ( 
         <div className="card"> <div className="image-wrapper">
             <Image
-            src={product.image}
+            src={product.images[0]}
             alt={product.title}
             fill
             sizes="(max-width: 768px) 50vw, 25vw"

@@ -12,7 +12,9 @@ export async function getProducts() {
 
     if (!res.ok) throw new Error("Failed to fetch");
 
-    return await res.json();
+    const data = await res.json();
+
+    return data.products;
   } catch (err) {
     console.error("FETCH ERROR:", err);
     return [];
